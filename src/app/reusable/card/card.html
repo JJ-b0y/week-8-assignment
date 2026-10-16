@@ -2,6 +2,8 @@
     class="card-container"
     [ngClass]="{
         outerBorder: showOuterBorder(),
+        cardHeightWithHeader: showOuterTextTag(),
+        cardHeightWithButton: showButton(),
     }"
 >
     @if (showOuterTextTag()) {
