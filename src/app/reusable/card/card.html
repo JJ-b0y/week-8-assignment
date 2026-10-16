@@ -1,0 +1,49 @@
+<div
+    class="card-container"
+    [ngClass]="{
+        outerBorder: showOuterBorder(),
+    }"
+>
+    @if (showOuterTextTag()) {
+        <div
+            [ngClass]="{
+                blueOuterBorderBgColor: id() === 0 || id() === 2 || id() === 4 && showOuterBorder(),
+                orangeOuterBorderBgColor: id() === 1 || id() === 3 || id() === 5 && showOuterBorder(),
+            }"
+            class="top-0 left-0 absolute w-full py-10 h-7.5 flex items-center justify-center text-[16px] font-bold tracking-[0.08em]"
+        >
+            {{ outerBorderTextTag() | uppercase }}
+        </div>
+    }
+    <div
+        [ngClass]="{
+            blueHeading: id() === 0 || id() === 2 || id() === 4,
+            orangeHeading: id() === 1 || id() === 3 || id() === 5,
+            marginTop: showOuterTextTag(),
+        }"
+        class="card-heading"
+    >
+        {{ heading() | uppercase }}
+    </div>
+    <div class="card-title">
+        {{ title() }}
+    </div>
+    <div class="card-content">
+        {{ content() }}
+    </div>
+    <div class="card-link">
+        <a [routerLink]="link()">{{ linkText() }}</a>
+    </div>
+    <div class="card-btn">
+        <app-button
+            [buttonType]="buttonType()"
+            [buttonText]="buttonText()"
+            (onClickTracker)="clickChildButton(buttonText())"
+        />
+    </div>
+    <div 
+        [ngClass]="{
+            'card-overlay': showOverlay(),
+        }"
+    ></div>
+</div>

@@ -1,0 +1,25 @@
+.home-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.home-logo {
+    border-radius: 15px;
+    border: 1px solid var(--color-brand-line);
+    transform: translateY(155px);
+    box-shadow: var(--shadow-card);
+}
+@media screen and (min-width: 768px) {
+  .home-logo-wrapper {
+    width: 440px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-logo-wrapper {
+    width: 200px;
+    height: 75px;
+  }
+}

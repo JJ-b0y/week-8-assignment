@@ -1,0 +1,16 @@
+<div [ngClass]="{
+    'home-logo-wrapper': isLandingLogo(),
+    'nav-logo-wrapper': !isLandingLogo(),
+    'footer-logo-wrapper': !isLandingLogo()
+                }"
+>
+    <img
+        src="myLogo.jpg"
+        alt="logo"
+        [ngClass]="{
+            'home-logo': isLandingLogo(),
+            'nav-logo': !isLandingLogo(),
+            'footer-logo': !isLandingLogo()
+                }"
+    >
+</div>

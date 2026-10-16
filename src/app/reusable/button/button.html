@@ -1,0 +1,9 @@
+<button
+  [ngClass]="{
+    whiteBgButton: buttonType() === 'white',
+    orangeButton: buttonType() === 'orange',
+  }"
+  (click)="onClickHandler()"
+>
+  {{ buttonText() }}
+</button>

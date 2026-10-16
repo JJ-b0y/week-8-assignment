@@ -1,0 +1,78 @@
+.card-container {
+    background-color: var(--color-brand-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 255px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+}
+.topBorderRadius {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    font-size: 0.85em;
+    font-weight: 900;
+    padding: 10px 16px;
+    border-radius: 10px;
+}
+.blueHeading {
+    background-color: hsl(194, 68%, 93%);
+    color: var(--color-brand-teal);
+}
+.orangeHeading {
+    background-color: hsl(0, 59%, 96%);
+    color: var(--color-brand-orange);
+}
+.card-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--color-brand-dark);
+}
+.card-content {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: gray;
+}
+.card-link {
+    font-size: 0.9em;
+    font-weight: 800;
+    color: var(--color-brand-teal);
+}
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: hsl(194, 68%, 93%);
+  border-top-left-radius: 100%;
+  pointer-events: none;
+}
+.outerBorder {
+    border: 1px solid hsl(0, 0%, 90%);
+}
+.card-outer-border-text-wrapper {
+    width: 100%;
+}
+.blueOuterBorderBgColor {
+    background: linear-gradient(155deg,hsl(192, 58%, 55%), hsl(192, 58%, 60%), hsl(192, 58%, 75%));
+    color: var(--color-brand-white);
+}
+.orangeOuterBorderBgColor {
+    background: var(--color-brand-orange);
+    color: white;
+}
+.marginTop {
+    margin-top: 70px;
+}
